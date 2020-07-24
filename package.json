@@ -1,0 +1,32 @@
+{
+  "name": "ssr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Fernando Caique Soares",
+  "repository": "",
+  "license": "MIT",
+  "scripts": {
+    "webpack:ssr": "webpack --config webpack.ssr.js",
+    "webpack:app": "webpack --config webpack.app.js",
+    "dev-serve": "nodemon dist",
+    "dev": "yarn webpack:ssr --watch & yarn webpack:app --watch & yarn dev-serve",
+    "build": "yarn webpack:ssr & yarn webpack:app",
+    "start": "node dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
